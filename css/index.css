@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: auto;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  display: flex;
+  padding: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+nav h3 {
+  color: white;
+}
+nav a {
+  text-decoration: none;
+  padding: 5px 0;
+  color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.home:before, .region:before, .kontak:before {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  border-radius: 25px;
+  transform: scaleX(0);
+  background: cyan;
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.home:hover, .region:hover, .kontak:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+}
+.home:hover:before, .region:hover:before, .kontak:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.home:hover {
+  color: #0f3d3e;
+}
+.region:hover {
+  color: #00bfa6;
+}
+.kontak:hover {
+  color: #e0f7f7;
+}
+#Home { background-color: #0f3d3e; }
+#Region { background-color: #00bfa6; }
+#Video { background-color: #001f3f; }
+#Contact { background-color: #e0f7f7; }
+html {
+  scroll-behavior: smooth;
+}
+section {
+  min-height: 100vh;
+  min-width: 100%;
+  scroll-margin-top: 0px;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  display: flex;
+}
+.isihome {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+}
+.welcome {
+  margin-top: 20px;
+}
+.mem {
+  margin: 5px auto;
+  font-size: 18px;
+}
+.bagianfoto {
+  margin: 50px auto;
+  display: inline;
+  position: relative;
+}
+.stepfoto, .stepfoto2 {
+  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 25px;
+}
+.foto {
+  height: 110px;
+  width: 110px;
+  border-radius: 5px;
+}
+.lan, .raffa, .quen, .syah {
+  text-align: center;
+  bottom: 80px;
+  left: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.5);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 15px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.lan:hover, .raffa:hover, .quen:hover, .syah:hover {
+  border-radius: 5px;
+  transform: translateY(-75px);
+  box-shadow: 0 0 5px white,
+              0 0 10px white,
+              0 0 15px black;
+}
+.bagiantombol {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+button:hover {
+  background-color: cyan;
+  border-radius: 10px;
+  transform: scale(1.1);
+  box-shadow: 0 0 5px white,
+              0 0 10px white,
+              0 0 15px black;
+}
+.bagianregion {
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.isiregion1, .isiregion2, .isiregion3, .isiregion4, .isiregion5, .isiregion6 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.isiregion1:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px white,
+              0 0 20px indianred,
+              0 0 25px red;
+}
+.isiregion2:hover, .isiregion3:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px white,
+              0 0 15px darkred,
+              0 0 20px red;
+}
+.isiregion4:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px white,
+              0 0 15px yellow,
+              0 0 20px red;
+}
+.isiregion5:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px red,
+              0 0 15px blue,
+              0 0 20px whitesmoke;
+}
+.isiregion6:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 10px blue,
+              0 0 15px yellow,
+              0 0 20px red,
+              0 0 25px white;
+}
+.text {
+  gap: 5px;
+  margin-top: 15px;
+}
+.flag {
+  box-shadow: 0 0 2px black,
+              0 0 4px black,
+              0 0 6px white;
+  border-radius: 5px;
+  width: 200px;
+  height: auto;
+}
+.titleregion {
+  font-size: 20px;
+}
+.tombolregion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.title {
+  margin: 80px auto;
+}
+.titleregion {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+}
+.arahan {
+  color: white;
+  text-align: center;
+  font-size: 9px;
+  margin-top: 2.5px;
+}
+.bagianvideo {
+  margin: 15px auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.flagregion {
+  width: 150px;
+  height: auto;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.flagregion:hover {
+  box-shadow: 0 0 3px white,
+              0 0 4px cyan,
+              0 0 6px lightcyan;
+  transform: scale(1.1);
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.isivideo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.judulregionvideo {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: 5px auto;
+}
+.titlecontact {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px auto;
+}
+ul, li {
+  display: flex;
+}
+.sosmed {
+  margin: 3px auto;
+  height: auto;
+  width: 25px;
+  border-radius: 50px;
+}
+.isi {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+.nametag, .wa, .ig {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.icons {
+  display: flex;
+  align-items: center;
+}
+.wa, .ig {
+  text-decoration: none;
+  color: black;
+}
+.isikontak {
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+@media (min-width: 1024px) {
+  nav {
+    padding: 15px;
+    gap: 30px;
+  }
+  nav h3 {
+    font-size: 1.5rem;
+  }
+  nav a {
+    font-size: 1.1rem;
+    padding: 8px 15px;
+  }
+  .bagianhome {
+    padding: 0 50px;
+  }
+  .welcome {
+    font-size: 2.5rem;
+    margin-top: 100px;
+  }
+  .mem {
+    font-size: 1.5rem;
+    margin: 20px auto;
+  }
+  .bagianfoto {
+    margin: 70px auto;
+    display: block;
+    position: relative;
+  }
+  .stepfoto, .stepfoto2 {
+    gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+  }
+  .foto {
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+  }
+  .lan, .raffa, .quen, .syah {
+    text-align: center;
+    bottom: 90px;
+    left: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.5);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 1.1rem;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  .lan:hover, .raffa:hover, .quen:hover, .syah:hover {
+    border-radius: 5px;
+    transform: translateY(-100px);
+    box-shadow: 0 0 5px white,
+                0 0 10px white,
+                0 0 15px black;
+  }
+  .bagiantombol {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 30px;
+  }
+  button {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: cyan;
+    border-radius: 10px;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px white,
+                0 0 10px white,
+                0 0 15px black;
+  }
+  .bagianregion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 50px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .isiregion1, .isiregion2, .isiregion3, 
+  .isiregion4, .isiregion5, .isiregion6 {
+    padding: 20px;
+    margin: 0;
+  }
+  .flag {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .titleregion {
+    font-size: 2rem;
+    margin: 100px auto 50px;
+  }
+  .bagianvideo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+  .flagregion {
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+  }
+  .judulregionvideo {
+    font-size: 1.5rem;
+  }
+  .arahan {
+    font-size: 0.9rem;
+  }
+  .bagiankontak {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .titlecontact {
+    font-size: 2rem;
+    margin: 40px auto;
+  }
+  .isikontak {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin: 40px auto;
+  }
+  .isi {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .icons {
+    margin: 10px 0;
+  }
+  .sosmed {
+    width: 30px;
+    margin-right: 15px;
+  }
+  .nametag, .wa, .ig {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .bagianregion {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+    gap: 40px;
+  }
+  .flag {
+    width: 220px;
+    height: 140px;
+  }
+  .bagianvideo {
+    max-width: 1200px;
+    gap: 60px;
+  }
+  .flagregion {
+    width: 250px;
+    height: 160px;
+  }
+}
+@media (min-width: 1920px) {
+  .bagianregion {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1800px;
+    gap: 50px;
+  }
+  .flag {
+    width: 280px;
+    height: 180px;
+  }
+  .bagianvideo {
+    max-width: 1600px;
+    gap: 80px;
+  }
+  .flagregion {
+    width: 300px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #121212;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.isivideo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  color: white;
+}
+button {
+  background-color: #121212;
+  margin-top: 20px;
+  margin: 5px auto;
+  padding: 12px;
+  border-radius: 5px;
+  width: 150px;
+  color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+button:hover {
+  background-color: white;
+  transform: scale(1.1);
+  color: black;
+  box-shadow: 0 0 2px white,
+              0 0 4px gray;
+}
+.kembali {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+iframe {
+  margin-top: 70px;
+  width: 340px;
+  height: 190px;
+  border-radius: 15px;
+}
+.bagiandeks {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: black;
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid white;
+}
+.title {
+  font-weight: bold;
+  font-size: 25px;
+}
+.deks {
+  text-align: center;
+}
+.buttoncontent {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.next, .back {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  background-color: #121212;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.next:hover, .back:hover {
+  transform: scale(1.1);
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 2px white,
+              0 0 4px white,
+              0 0 8px black;
+}
+.arahanvideo {
+  text-align: center;
+  font-size: 13px;
+  color: #585858;
+}
+
+
+
+@media (min-width: 1024px) {
+  .bagianvideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .isivideo {
+    max-width: 1000px;
+    gap: 30px;
+  }
+  iframe {
+    margin-top: 20px;
+    width: 800px;
+    height: 450px;
+    border-radius: 15px;
+  }
+  .bagiandeks {
+    width: 800px;
+    padding: 30px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .deks {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  button {
+    padding: 15px;
+    width: 180px;
+  }
+  .kembali {
+    font-size: 22px;
+  }
+  .next, .back {
+    font-size: 35px;
+    padding: 8px 15px;
+  }
+  .arahanvideo {
+    font-size: 16px;
+  }
+  .buttoncontent {
+    gap: 30px;
+  }
+}
+@media (min-width: 1440px) {
+  .isivideo {
+    max-width: 1200px;
+  }
+  iframe {
+    width: 900px;
+    height: 506px;
+  }
+  .bagiandeks {
+    width: 900px;
+  }
+}
+@media (min-width: 1920px) {
+  .isivideo {
+    max-width: 1400px;
+  }
+  iframe {
+    width: 1000px;
+    height: 563px;
+  }
+  .bagiandeks {
+    width: 1000px;
+  }
+  .deks {
+    font-size: 20px;
+  }
+}
